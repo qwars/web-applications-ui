@@ -1,2 +1,5 @@
-# web-applications-ui
-Styleshets, Tags, Components
+# web-applications-ui::Styleshets
+
+Styleshets - скомпиленый CSS для проектов и сайтов
+
+
