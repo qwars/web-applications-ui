@@ -1,0 +1,12 @@
+
+a, [href]:not(use)
+	color: var(--link-default-color)
+	text-decoration: none
+	cursor: pointer
+	&:hover:not(:active), &:hover:not(.active)
+		color: var(--link-hover-color)
+		text-decoration: underline
+	&.active, &:active, &.active:hover
+		color: var(--link-active-color)
+		font-weight: bolder
+		text-decoration: none

@@ -1,0 +1,45 @@
+
+:root
+	--text-font: normal normal 300 normal 16px / normal -apple-system, "Segoe UI", system-ui, Roboto, "Noto Sans", "Helvetica Neue", sans-serfi
+	--title-font: normal normal 400 normal 16px / normal -apple-system, "Segoe UI", system-ui, Roboto, "Noto Sans", "Helvetica Neue", sans-serfi
+	--extra-font: normal normal 300 normal 16px / normal -apple-system, "Segoe UI", system-ui, Roboto, "Noto Sans", "Helvetica Neue", sans-serfi
+	--mono-font: normal normal 300 normal 13px / normal SFMono-Regular, Menlo, Monaco, Consolas,  "Nimbus Mono L", "Tlwg Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace
+
+
+.TRIANGLE-COMBINING, .CIRCLE-COMBINING-BACKSLASH,
+.DIAMOND-COMBINING, .KEYCAP-COMBINING,
+.SCREEN-COMBINING, .SQUARE-COMBINING,
+.CIRCLE-COMBINING, .SOFTWARE-FUNCTION-SYMBOL
+	font-style: normal
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	min-width: 2rem
+	&:after
+		font-size: 2.3em
+		line-height: 86.95%
+
+
+.TRIANGLE-COMBINING:after
+	content: '\20E4'
+
+.CIRCLE-COMBINING-BACKSLASH:after
+	content: '\20E0'
+
+.DIAMOND-COMBINING:after
+	content: '\20DF'
+
+.KEYCAP-COMBINING:after
+	content: '\20E3'
+
+.SCREEN-COMBINING:after
+	content: '\20E2'
+
+.SQUARE-COMBINING:after
+	content: '\20DE'
+
+.CIRCLE-COMBINING:after
+	content: '\20DD'
+
+.SOFTWARE-FUNCTION-SYMBOL:after
+	content: '\2394'

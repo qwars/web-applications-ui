@@ -10,3 +10,15 @@ git submodule add -b stylussheets git@github.com:qwars/web-applications-ui.git d
 
 git submodule update --init --recursive 
 
+Внедрение с обработчиками JS
+
+`import './stylesheets'`
+
+или без обработчиков в CSS
+
+`@import './stylesheets'`
+
+или можно по отдельности любой из наборов
+
+
+

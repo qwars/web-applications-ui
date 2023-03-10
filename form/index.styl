@@ -1,1 +1,75 @@
 
+label
+	display: grid
+	border: 1px solid var(--border-color)
+	box-sizing: border-box
+	& > input
+		border: 0px solid transparent
+		grid-area: 1/1/2/2
+		background-color: transparent
+		height: 2.3rem
+		margin: 0px 1rem
+		&:focus
+			outline: none
+
+		& ~ legend
+			grid-area: 1/1/2/2
+			align-self: flex-start
+			max-width: max-content
+			padding: 0px 1ex
+			margin: -1px 1em 0px 1em
+			height: 3px
+			display: inline-flex
+			align-items: center
+			background-color: var(--canvas-color)
+
+
+		& ~ sub
+			grid-area: 1/1/2/2
+			place-self: flex-end
+			display: inline-flex
+			align-items: center
+			max-width: max-content
+			padding: 0px 1ex
+			margin: 0px 1em -1px 1em
+			height: 3px
+			background-color: var(--canvas-color)
+
+		& ~ sup
+			grid-area: 1/1/2/2
+			align-self: center
+			justify-self: flex-end
+			display: inline-flex
+			align-items: center
+			white-space: nowrap
+			margin: -.75rem
+			background: var(--canvas-color)
+			&:before
+				content: '?'
+				font-size: initial
+				font-weight: bolder
+				color: var(--extra-color)
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				border: 1px solid var(--border-color)
+				height: 1.5rem
+				width: 1.5rem
+				border-radius: 50%
+
+
+		& ~ i
+			grid-area: 1/1/2/2
+			align-self: center
+			justify-self: flex-start
+			display: inline-flex
+			align-items: center
+			text-indent: -100000em
+
+		&[type="color"]
+			inline-size: auto
+			block-size: 1.5rem
+			align-self: center
+
+		&[type="checkbox"],&[type="radio"]
+			justify-self: flex-start
