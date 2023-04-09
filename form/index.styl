@@ -3,12 +3,15 @@ label
 	display: grid
 	border: 1px solid var(--border-color)
 	box-sizing: border-box
+
 	& > input
 		border: 0px solid transparent
 		grid-area: 1/1/2/2
 		background-color: transparent
 		height: 2.3rem
 		margin: 0px 1rem
+		font: var(--text-font)
+		color: var(--text-color)
 		&:focus
 			outline: none
 
@@ -22,7 +25,6 @@ label
 			display: inline-flex
 			align-items: center
 			background-color: var(--canvas-color)
-
 
 		& ~ sub
 			grid-area: 1/1/2/2
@@ -53,10 +55,9 @@ label
 				align-items: center
 				justify-content: center
 				border: 1px solid var(--border-color)
-				height: 1.5rem
-				width: 1.5rem
+				height: 1.3rem
+				width: 1.3rem
 				border-radius: 50%
-
 
 		& ~ i
 			grid-area: 1/1/2/2
@@ -73,3 +74,58 @@ label
 
 		&[type="checkbox"],&[type="radio"]
 			justify-self: flex-start
+		&.switcher[type="checkbox"]
+			margin: .65rem 1rem
+
+input[type="number"]
+	-moz-appearance: textfield
+	appearance: textfield
+input[type="number"]::-webkit-inner-spin-button
+	display: none
+
+input[type="range"]::-moz-range-thumb
+	width: .7rem
+	height: .7rem
+	background: var(--active-color)
+	border: 1px solid var(--active-color)
+
+input[type="range"]::-moz-range-track
+	background: var(--canvas-color)
+	border: 1px solid var(--border-color)
+	height: .1rem
+input[type="range"]::-moz-range-progress
+	background: var(--active-color)
+
+input[type="range"]
+	cursor: pointer
+	-webkit-appearance: none
+	--range: calc(var(--max) - var(--min))
+	--ratio: calc((var(--value) - var(--min)) / var(--range))
+	--sx: calc(0.5 * 2em + var(--ratio) * (100% - 2em));
+	&::-webkit-slider-thumb
+		-webkit-appearance: none
+		width: .8em
+		height: .8em
+		border-radius: .7em
+		background: var(--active-color)
+		border: none
+		box-shadow: 0 0 0px transparent
+		margin-top: -.3rem
+
+	&::-webkit-slider-runnable-track
+		height: .3em;
+		border: 1px solid var(--border-color);
+		border-radius: 0.3em;
+		background: transparent;
+	&::-webkit-progress-value
+		background: var(--active-color)
+
+input.switcher[type="checkbox"]
+	appearance: inherit
+	width: 1.5rem
+	height: 1rem
+	border-radius: 1rem
+	background: radial-gradient(circle at .5rem, var(--canvas-color) .37rem, var(--placeholder-color) 0)
+	cursor: pointer
+	&:checked
+		background: radial-gradient(circle at 1rem, var(--canvas-color) .37rem, var(--active-color) 0)

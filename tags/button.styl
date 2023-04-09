@@ -5,3 +5,35 @@ button
 	display: inline-flex
 	align-items: center
 	padding: 0px 2rem
+	font: var(--text-font)
+	color: var(--extra-color)
+	cursor: pointer
+	background-color: var(--focus-color)
+	color: var(--canvas-color)
+	@media (prefers-color-scheme: dark)
+		color: rgba(255 255 255 .75)
+	&:before
+		margin-left: -1rem
+		margin-right: .5rem
+	&.visited, &:visited
+		background-color: var(--link-visited-color)
+	&.hover, &:hover
+		background-color: var( --hover-color )
+	&.active, &:active
+		background-color: var( --active-color )
+	&.invalid, &:invalid, &[invalid]
+		background-color: var( --invalid-color )
+		cursor: default
+		&:before
+			content: '\26a0'
+	&.warning, &[warning]
+		background-color: var( --warning-color )
+		&:before
+			content: '\2bd1'
+	&.disabled, &:disabled
+		background-color: var(--disabled-color)
+		color: var(--text-color)
+		cursor: default
+	&.loading
+		background-color: var(--focus-color)
+		cursor: default
